@@ -10,6 +10,7 @@ services:
 
 install:
   - sudo pip install nose2
+  - git clone https://github.com/kt3k/coveralls-gradle-plugin.git
 
 script:
   - make
