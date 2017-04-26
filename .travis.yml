@@ -2,6 +2,9 @@ language: java
 
 sudo: required
 
+jdk:
+- oraclejdk8
+
 services:
   - docker
 
@@ -11,3 +14,6 @@ install:
 script:
   - make
   - make sdkbase
+
+after_success:
+- ./gradlew jacocoTestReport coveralls
