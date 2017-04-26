@@ -17,4 +17,6 @@ script:
   - make sdkbase
 
 after_success:
-- ./gradlew jacocoTestReport coveralls
+  - ls
+  - ls coveralls-gradle-plugin/
+  - ./coveralls-gradle-plugin/gradlew jacocoTestReport coveralls
